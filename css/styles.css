@@ -1,0 +1,80 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.gallery {
+  background-color: rgb(202, 202, 202);
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.spinner {
+  margin: auto;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid red;
+  animation-name: spin;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.gallery-image {
+  width: auto;
+  height: 150px;
+  margin: 5px;
+  transition: all 0.2s;
+}
+.gallery-image:active {
+  transform: scale(0.9);
+}
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* height: 100px; */
+  background: #cacaca;
+}
+.select-image {
+  grid-column: 1 / 3;
+  justify-self: center;
+  margin: 20px 0;
+}
+.inputs {
+  display: flex;
+  margin: 10px 30px;
+  justify-content: space-evenly;
+}
+.selected {
+  border: 5px solid red;
+  box-sizing: border-box;
+}
+.preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.preview h2 {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px 0;
+}
+#previewImage {
+  height: 300px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2520deg);
+  }
+}

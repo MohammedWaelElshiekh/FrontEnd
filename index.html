@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="container">
+      <div id="gallery" class="gallery">
+        <span id="spinner" class="spinner"></span>
+      </div>
+      <form id="uploadForm" enctype="multipart/form-data" method="post">
+        <span class="select-image">
+          <label for="image">Select an image to resize:</label>
+          <input type="file" name="image" id="image" />
+        </span>
+        <span class="inputs">
+          <label for="height">The new height</label>
+          <input required type="number" name="height" id="height" />
+        </span>
+        <span class="inputs">
+          <label for="width">The new width</label>
+          <input required type="number" name="width" id="width" />
+        </span>
+        <span class="buttons">
+          <button type="reset">Clear</button>
+          <button type="button" id="submitButton">Resize Image</button>
+        </span>
+      </form>
+      <div class="preview" id="preview">
+        <h2>Preview</h2>
+      </div>
+    </div>
     <script src="./js/app.js"></script>
   </body>
 </html>
