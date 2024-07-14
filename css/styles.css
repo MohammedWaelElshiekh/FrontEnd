@@ -64,12 +64,19 @@ form {
 .preview h2 {
   text-align: center;
   font-size: 50px;
-  margin: 20px 0;
+  margin: 0;
 }
 #previewImage {
   height: 300px;
 }
-
+.url {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.url h2 {
+  margin-right: 15px;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
